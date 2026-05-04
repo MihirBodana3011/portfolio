@@ -4,7 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Mihir Bodana — Senior Data Analyst</title>
+  <title>Mihir Bodana — Senior Data Analyst | BFSI & Automation</title>
+  <meta name="description" content="Mihir Bodana — Senior Data Analyst with 5+ years in BFSI. Expert in Python, Power BI, SQL, ETL pipelines and automation. Based in Ahmedabad, Gujarat." />
+  <meta name="keywords" content="Mihir Bodana, Data Analyst, BFSI, Power BI, Python, SQL, ETL, Ahmedabad" />
+  <meta name="author" content="Mihir Bodana" />
+  <meta property="og:title" content="Mihir Bodana — Senior Data Analyst" />
+  <meta property="og:description" content="5+ years in BFSI analytics. Python, Power BI, SQL, ETL pipelines. 18+ production projects." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mihir Bodana — Senior Data Analyst" />
+  <meta name="twitter:description" content="BFSI specialist. Python · Power BI · SQL · 5+ Years Experience" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
@@ -1291,6 +1300,38 @@
       font-family: 'Space Mono', monospace;
     }
 
+    .pfeat {
+      list-style: none;
+      margin: 12px 0;
+      padding: 0;
+    }
+
+    .pfeat li {
+      font-size: .75rem;
+      color: rgba(223, 240, 255, .7);
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .pfeat li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+    }
+
+    .pimp {
+      font-size: .75rem;
+      color: #fff;
+      background: rgba(0, 240, 255, .05);
+      padding: 8px 12px;
+      border-left: 2px solid var(--cyan);
+      margin-top: 12px;
+      font-style: italic;
+    }
+
     /* AWARD */
     #award {
       background: var(--navy);
@@ -1575,26 +1616,196 @@
       z-index: 1;
     }
 
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(28px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* NAV ACTIVE STATE */
+    .nav-links a.active {
+      color: var(--cyan);
+    }
+    .nav-links a.active::after {
+      width: 100%;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
+    /* NAV SCROLLED */
+    nav.scrolled {
+      background: rgba(3, 9, 26, .92);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, .4);
+    }
 
-      to {
-        opacity: 1;
-      }
+    /* TYPING CURSOR */
+    .typing-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background: var(--gold);
+      margin-left: 3px;
+      vertical-align: middle;
+      animation: blink .7s step-end infinite;
+    }
+
+    /* BACK TO TOP */
+    #btt {
+      position: fixed;
+      bottom: 36px;
+      right: 36px;
+      width: 44px;
+      height: 44px;
+      background: var(--card-glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: none;
+      z-index: 90;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .3s, transform .3s, border-color .3s, box-shadow .3s;
+      color: var(--cyan);
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    #btt.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #btt:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 0 24px rgba(0, 240, 255, .3);
+    }
+    @media(max-width:768px) {
+      #btt { right: 18px; bottom: 24px; cursor: pointer; }
+    }
+
+    /* ROLE TAG */
+    .prole {
+      font-family: 'Space Mono', monospace;
+      font-size: .58rem;
+      color: var(--violet);
+      letter-spacing: 1px;
+      border: 1px solid rgba(123, 47, 255, .3);
+      background: rgba(123, 47, 255, .07);
+      padding: 2px 8px;
+      border-radius: 2px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    /* CONTACT FORM */
+    .cform-wrap {
+      max-width: 560px;
+      margin: 0 auto;
+      background: var(--card-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 36px;
+    }
+    .cform-wrap input,
+    .cform-wrap textarea {
+      width: 100%;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--card-border);
+      border-radius: 4px;
+      padding: 12px 16px;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: .9rem;
+      margin-bottom: 14px;
+      outline: none;
+      transition: border-color .3s, box-shadow .3s;
+      resize: none;
+    }
+    .cform-wrap input::placeholder,
+    .cform-wrap textarea::placeholder {
+      color: var(--muted);
+    }
+    .cform-wrap input:focus,
+    .cform-wrap textarea:focus {
+      border-color: rgba(0, 240, 255, .4);
+      box-shadow: 0 0 16px rgba(0, 240, 255, .08);
+    }
+    .cform-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 32px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-family: 'Orbitron', monospace;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: none;
+      transition: box-shadow .3s, transform .2s;
+      width: 100%;
+      justify-content: center;
+    }
+    .cform-submit:hover {
+      box-shadow: 0 0 30px rgba(0, 240, 255, .5);
+      transform: translateY(-2px);
+    }
+    @media(max-width:768px) {
+      .cform-wrap { padding: 20px; }
+      .cform-submit { cursor: pointer; }
+    }
+
+    /* CONTACT SECTION LAYOUT */
+    #contact .contact-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    #contact .ctit {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    #contact .csub {
+      text-align: center;
+    }
+    #contact .clinks {
+      margin-bottom: 44px;
+    }
+    #contact .cor {
+      text-align: center;
+      font-family: 'Space Mono', monospace;
+      font-size: .65rem;
+      color: var(--muted);
+      letter-spacing: 3px;
+      margin-bottom: 28px;
+      position: relative;
+    }
+    #contact .cor::before,
+    #contact .cor::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: calc(50% - 30px);
+      height: 1px;
+      background: var(--border);
+    }
+    #contact .cor::before { left: 0; }
+    #contact .cor::after { right: 0; }
+
+    /* DOWNLOAD CV BUTTON VARIANT */
+    .btn-d {
+      background: transparent;
+      border: 1px solid rgba(255,201,77,.35);
+      color: var(--gold);
+    }
+    .btn-d:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 30px rgba(255, 201, 77, .2);
+    }
+
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(28px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity:0; }
+      to   { opacity:1; }
     }
 
     /* ═══════════════════════════════════════════════════
@@ -1962,6 +2173,7 @@
       <li><a href="#experience" onclick="closeNav()">Experience</a></li>
       <li><a href="#projects" onclick="closeNav()">Projects</a></li>
       <li><a href="#award" onclick="closeNav()">Award</a></li>
+      <li><a href="#education" onclick="closeNav()">Education</a></li>
       <li><a href="#contact" onclick="closeNav()">Contact</a></li>
     </ul>
     <div id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
@@ -1973,7 +2185,7 @@
       <span class="n1"><span class="g1">MIHIR</span><span class="g2">MIHIR</span>MIHIR</span>
       <span class="n2"><span class="g1">BODANA</span><span class="g2">BODANA</span>BODANA</span>
     </h1>
-    <p class="hrole">Python &nbsp;·&nbsp; Power BI &nbsp;·&nbsp; SQL &nbsp;·&nbsp; <b>5+ Years BFSI</b></p>
+    <p class="hrole" id="hrole-text">Python &nbsp;·&nbsp; Power BI &nbsp;·&nbsp; SQL &nbsp;·&nbsp; <b>5+ Years BFSI</b></p>
     <p class="hdesc">Turning raw data into decisions that matter — building production-grade ETL pipelines, AI-powered
       analytics tools, and interactive dashboards that reduce manual effort by <strong
         style="color:var(--cyan)">40%</strong> and deliver <strong style="color:var(--gold)">100% accuracy</strong>,
@@ -1984,7 +2196,7 @@
         <div class="slbl">Years Exp</div>
       </div>
       <div class="sbox">
-        <div class="snum" data-count="13" data-sfx="+">0</div>
+        <div class="snum" data-count="18" data-sfx="+">0</div>
         <div class="slbl">Projects</div>
       </div>
       <div class="sbox">
@@ -1999,6 +2211,7 @@
     <div class="hbtns">
       <a href="#projects" class="btn btn-g">⚡ View Projects</a>
       <a href="#contact" class="btn btn-o">✉ Contact Me</a>
+      <a href="mailto:mihir.bodana030@gmail.com?subject=Resume%20Request&body=Hi%20Mihir%2C%20could%20you%20please%20share%20your%20resume%3F" class="btn btn-d">📄 Request CV</a>
     </div>
     <div class="scroll-hint">
       <div class="sl"></div><span>SCROLL</span>
@@ -2077,26 +2290,44 @@
   </section>
 
   <section id="contact">
-    <h2 class="ctit">Let's Connect</h2>
-    <p class="csub">Open to Senior Data Analyst, BI Analyst &amp; BFSI Analytics roles</p>
-    <div class="clinks">
-      <a class="clink" href="mailto:mihir.bodana030@gmail.com"><span>✉️</span> mihir.bodana030@gmail.com</a>
-      <a class="clink" href="https://www.linkedin.com/in/mihir-bodana/" target="_blank"><span>💼</span> LinkedIn</a>
-      <a class="clink" href="https://github.com/MihirBodana3011" target="_blank"><span>🐙</span> GitHub</a>
-      <a class="clink" href="tel:+919023243011"><span>📱</span> +91 9023243011</a>
-      <a class="clink" style="cursor:default"><span>📍</span> Ahmedabad, Gujarat</a>
+    <div class="sec-head"><span class="sec-num">06</span>
+      <h2 class="sec-title">Let's Connect</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="contact-inner">
+      <h2 class="ctit">Open to Opportunities</h2>
+      <p class="csub">Senior Data Analyst · BI Analyst · BFSI Analytics roles</p>
+      <div class="clinks">
+        <a class="clink" href="mailto:mihir.bodana030@gmail.com"><span>✉️</span> mihir.bodana030@gmail.com</a>
+        <a class="clink" href="https://www.linkedin.com/in/mihir-bodana/" target="_blank"><span>💼</span> LinkedIn</a>
+        <a class="clink" href="https://github.com/MihirBodana3011" target="_blank"><span>🐙</span> GitHub</a>
+        <a class="clink" href="tel:+919023243011"><span>📱</span> +91 9023243011</a>
+        <a class="clink" style="cursor:default"><span>📍</span> Ahmedabad, Gujarat</a>
+      </div>
+      <div class="cor">OR SEND A MESSAGE</div>
+      <div class="cform-wrap">
+        <input type="text" id="cf-name" placeholder="Your Name" autocomplete="off" />
+        <input type="email" id="cf-email" placeholder="Your Email" autocomplete="off" />
+        <textarea id="cf-msg" rows="4" placeholder="Your message..."></textarea>
+        <button class="cform-submit" onclick="submitForm()">⚡ Send Message</button>
+      </div>
     </div>
   </section>
-  <footer>© 2026 MIHIR BODANA &nbsp;·&nbsp; DATA ANALYST &amp; AUTOMATION ENGINEER</footer>
+  <a id="btt" href="#hero" title="Back to top">↑</a>
+  <footer>© <span id="fyear"></span> MIHIR BODANA &nbsp;·&nbsp; DATA ANALYST &amp; AUTOMATION ENGINEER</footer>
 
   <script>
+    const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+    
     const SKILLS = [
-      { icon: '📊', name: 'Analytics & BI', tags: ['Power BI', 'DAX', 'Drill-Through', 'Zoho Analytics', 'MIS Automation', 'KPI Tracking', 'Trend Analysis', 'Forecasting', 'Data Storytelling'] },
-      { icon: '🐍', name: 'Python', tags: ['Pandas', 'openpyxl', 'Regex', 'Automation', 'pdfplumber', 'Flask', 'Beautiful Soup', 'rapidfuzz', 'NLP'] },
-      { icon: '🗄️', name: 'SQL & Excel', tags: ['SQL Joins', 'Aggregation', 'VBA', 'Power Query', 'Pivot Tables', 'INDEX-MATCH', 'Conditional Formatting', 'Macros', 'VLOOKUP'] },
-      { icon: '⚙️', name: 'Data Engineering', tags: ['ETL Pipelines', 'JSON/CSV Processing', 'REST API Integration', 'Schema Validation', 'Batch Processing', 'Error Logging', 'Data Cleaning'] },
-      { icon: '🏦', name: 'BFSI Domain', tags: ['Loan Operations', 'CIBIL Compliance', 'Credit Risk', 'Fraud Detection', 'Disbursement Mgmt', 'Regulatory Audit MIS', 'Underwriting'] },
-      { icon: '🌐', name: 'Web & CRM', tags: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap 5', 'Fuse.js', 'Zoho CRM', 'LeadSquared', 'FinOne', 'SAP', 'Google Apps Script'] },
+      { icon: '📊', name: 'Analytics & BI', tags: ['Power BI', 'DAX', 'Drill-Through', 'Zoho Analytics', 'MIS Automation', 'KPI Tracking', 'Trend Analysis', 'Data Storytelling'] },
+      { icon: '🐍', name: 'Python Development', tags: ['Pandas', 'NumPy', 'Regex', 'Automation', 'pdfplumber', 'Beautiful Soup', 'NLP', 'TLV Parsing'] },
+      { icon: '🗄️', name: 'SQL & Advanced Excel', tags: ['SQL Joins', 'Aggregation', 'VBA', 'Power Query', 'Pivot Tables', 'INDEX-MATCH', 'Macros', 'VLOOKUP'] },
+      { icon: '⚙️', name: 'Data Engineering', tags: ['ETL Pipelines', 'Rate-Limiting', 'Multi-threading', 'Batch Processing', 'JSON/CSV processing', 'Error Recovery'] },
+      { icon: '🏦', name: 'BFSI & Fintech', tags: ['Loan Operations', 'CIBIL Compliance', 'Credit Risk', 'Fraud Detection', 'Underwriting', 'Regulatory Audit MIS'] },
+      { icon: '🌐', name: 'Web Development', tags: ['HTML5', 'ES6+', 'JavaScript', 'Flask (Python)', 'Google Apps Script', 'REST API', 'Bootstrap 5'] },
+      { icon: '🎨', name: 'UI/UX & Design', tags: ['Glassmorphism', 'Industrial UI', 'Responsive Arch', 'CSS3 Animations', 'Modern Typography'] },
+      { icon: '🧩', name: 'Advanced Problem Solving', tags: ['Fuzzy Matching', 'Geocoding Engines', 'Automated Auditing', 'Schema Validation', 'SOP Design'] },
     ];
     const EXP = [
       { co: 'HRA – Horizon Retailers Association', role: 'Senior Data Analyst & Customer Support Executive', date: 'Jul 2025 – Present', loc: 'Ahmedabad', buls: ['Built Power BI dashboards (DAX, drill-through) and Python ETL pipelines — automated full MIS cycle, cutting manual effort by 40% and ensuring 100% data accuracy.', 'Analyzed multi-source datasets using Excel & Python (Pandas) to surface trends and revenue opportunities; presented findings to senior leadership for strategic decisions.', 'Deployed Python data validation scripts for pre-report anomaly detection; structured outputs in HTML for web-based internal dashboards.', 'Mentored junior analysts on Excel automation and Python scripting — built internal data literacy across the team.'] },
@@ -2108,30 +2339,260 @@
     ];
     const PROJS = [
       {
+        month: 'May 2026', items: [
+          {
+            icon: '🛡️',
+            title: 'EaseBiz RecruitGuard – Enterprise ATS Data Audit Platform',
+            role: 'Lead Full-Stack Developer',
+            desc: 'High-performance, privacy-centric data auditing tool for ATS to ensure 100% data integrity in recruitment databases.',
+            features: [
+              'Local-First Processing: Browser-side parsing using SheetJS/ExcelJS ensures GDPR compliance.',
+              'Advanced Validation Logic: Specialized algorithms for Indian mobile number validation.',
+              'Intelligent Entity Detection: Custom NLP-based keyword matching to flag professional roles.',
+              'Dynamic Reporting: Automated Excel reports with advanced formatting and filtering.'
+            ],
+            impact: 'Eliminated data entry errors by 95% and reduced audit time from hours to seconds.',
+            tags: ['JavaScript', 'SheetJS', 'ExcelJS', 'Glassmorphic', 'HTML5']
+          }
+        ]
+      },
+      {
+        month: 'April 2026', items: [
+          {
+            icon: '🔋',
+            title: 'FitOs – Biological Hyper-HUD (Industrial Health Platform)',
+            role: 'Lead UI/UX Engineer & Frontend Architect',
+            desc: 'Futuristic, high-intensity health monitoring dashboard designed for athletes and bio-hackers.',
+            features: [
+              'Metabolic Adaptability Score (MAS): Algorithm calculating biological adherence to nutrition.',
+              'Cyber-Terminal Console: Real-time diagnostic logger for metabolic phases.',
+              'Neural Drive Monitoring: Recovery prediction models providing training alerts.',
+              'High-Fidelity Aesthetics: Grit & Glitch industrial UI with CRT scanlines and hardware transitions.'
+            ],
+            impact: 'Created a unique, immersive user experience differentiating from traditional trackers.',
+            tags: ['Vanilla JS', 'CSS3', 'PWA', 'LocalStorage API']
+          }
+        ]
+      },
+      {
+        month: 'March 2026', items: [
+          {
+            icon: '🛒',
+            title: 'TheLuffystore – High-Performance E-Commerce',
+            role: 'Frontend Developer',
+            desc: 'Complete front-end architecture for a modern e-commerce store focused on speed and SEO.',
+            features: [
+              'Dynamic Templating: Single-template product system rendering 100+ unique pages.',
+              'Persistent Cart Logic: Custom JavaScript-based cart using localStorage.',
+              'Advanced Visual Effects: Blur-BG hero effects and optimized image delivery.',
+              'Interactive Search: Live-filtering search modal without page reloads.'
+            ],
+            impact: 'Achieved sub-1s page load time and improved maintainability by 70%.',
+            tags: ['HTML5', 'CSS3', 'JavaScript', 'URL Parameters']
+          },
+          {
+            icon: '🧹',
+            title: 'Bizcivitas Contact Cleaner & Validator',
+            role: 'Backend Developer',
+            desc: 'Specialized utility for cleaning and validating enterprise-level contact databases.',
+            features: [
+              'Format Standardization: Robust regex engine to clean illegal characters and non-standard symbols.',
+              'Number Normalization: Formats phone numbers into international standards and flags fake sequences.',
+              'Web Interface: Flask-based GUI for non-technical users to process large datasets.'
+            ],
+            impact: 'Cleaned database of 500k+ records, improving CRM sync success rates by 40%.',
+            tags: ['Python', 'Flask', 'Pandas', 'Regex']
+          }
+        ]
+      },
+      {
         month: 'February 2026', items: [
-          { icon: '🌍', title: 'AI-Powered Address Matching Engine', desc: 'Production-grade geo-matching system combining TF-IDF ML, fuzzy matching, phonetic scoring (Soundex/Metaphone), and 4 geocoding APIs (Google Maps, ArcGIS, Photon, Nominatim) with weighted confidence scoring. Cut validation TAT from days to minutes.', tags: ['Python', 'TF-IDF', 'Fuzzy Match', 'Google Maps API', 'ArcGIS'] },
-          { icon: '📜', title: 'TUDF Credit Bureau Parser', desc: 'Python parser for TransUnion Data Format files — converts fixed-length binary bureau records into color-coded multi-sheet Excel reports with DPD flagging, auto-filter headers, QA dashboards, and batch-directory processing.', tags: ['Python', 'TUDF', 'openpyxl', 'Credit Bureau', 'Batch Processing'] },
-          { icon: '🤖', title: 'Leads AI Analyzer', desc: 'AI-augmented sales lead scoring engine — auto-enriches missing geo fields, runs comprehensive data quality checks (duplicates, mobile/email validation, age range), and outputs color-coded KPI dashboards with district-wise heat maps.', tags: ['Python', 'Pandas', 'NLP', 'Lead Scoring', 'Geo-Intelligence'] },
-          { icon: '📲', title: 'Telegram Lead Extractor', desc: 'Python tool using regex + NLP heuristics to extract structured farmer sales leads from Telegram HTML exports — integrated rapidfuzz geo-matching and Gujarati-to-English transliteration (ITRANS).', tags: ['Python', 'NLP', 'rapidfuzz', 'Regex', 'Beautiful Soup'] },
-          { icon: '💰', title: 'Smart Price Comparison App', desc: 'Zero-dependency single-file browser app with Fuse.js fuzzy search, live side-by-side vendor price comparison with lowest-cost auto-highlighting, automated quotation builder with discount logic and one-click export.', tags: ['HTML5', 'Fuse.js', 'JavaScript', 'Bootstrap 5', 'Serverless'] },
-          { icon: '📄', title: 'GRM PDF → Excel Converter', desc: 'Flask web application automating conversion of BULL Agritech GRM PDF reports into structured Excel files via pdfplumber + openpyxl. Supports batch PDF uploads through a browser interface with immediate Excel download.', tags: ['Flask', 'pdfplumber', 'openpyxl', 'PDF Parsing', 'Web App'] },
-          { icon: '🔄', title: 'Excel → JSON Product Converter', desc: 'Python utility converting product master Excel files into clean, structured JSON with column-level schema validation, data type normalization, and Unicode support — powering a live procurement web app.', tags: ['Python', 'openpyxl', 'JSON', 'Schema Validation', 'Procurement'] },
-          { icon: '🌾', title: 'Gujarat Farmer Geo-Reference Dataset', desc: 'Comprehensive geo-reference dataset covering all Gujarat districts, talukas, and villages in CSV/Excel formats — serves as lookup backbone for agricultural data pipelines with fuzzy and exact query support.', tags: ['Data Engineering', 'CSV', 'Excel', 'Geo Data', 'Agriculture'] },
-          { icon: '🏭', title: 'Warehouse SOP & Compliance System', desc: 'Comprehensive Warehouse SOPs and Compliance guidelines for Kisan Warehouse Management System — authored detailed farmer produce storage agreements ensuring regulatory compliance and risk mitigation.', tags: ['SOP Design', 'Compliance', 'Risk Mitigation', 'Documentation'] },
+          {
+            icon: '🤖',
+            title: 'Leads AI Analyzer – Intelligent Sales Data Engine',
+            role: 'Data Engineer / AI Architect',
+            desc: 'Unified script designed to clean and analyze sales leads with high-level business intelligence.',
+            features: [
+              'Smart Mapping: AI Mapping logic that automatically detects and standardizes column headers.',
+              'Linguistic Transliteration: Custom Gujarati-to-English translation engine for national CRMs.',
+              'Lead Quality Scoring: Weighted scoring model (0-100) based on phone validity and completeness.',
+              'Executive Dashboards: Automated Excel reports with KPIs, action plans, and color-coded tiers.'
+            ],
+            impact: 'Reduced data processing overhead by 85% for sales teams.',
+            tags: ['Python', 'Pandas', 'Openpyxl', 'Regex', 'Tkinter']
+          },
+          {
+            icon: '🌍',
+            title: 'AI-Powered Address Matching & Geocoding Engine',
+            role: 'Python Developer / GIS Engineer',
+            desc: 'High-speed engine designed to resolve thousands of messy physical addresses into precise coordinates.',
+            features: [
+              'Turbo-Parallelism: Multi-threading increasing geocoding speed by 500%.',
+              'Heuristic Fallback: Multi-level fallback logic to handle incomplete address data.',
+              'Google Maps Integration: Automated deep links for visual verification of matched points.'
+            ],
+            impact: 'Successfully processed master list of 50k+ stores with a 98% resolution rate.',
+            tags: ['Python', 'Geopy', 'Multi-threading', 'Pandas']
+          },
+          {
+            icon: '📜',
+            title: 'TUDF Ultra Parser – Credit Bureau Data Engineer',
+            role: 'Senior Data Parser',
+            desc: 'Production-grade parser for TransUnion Data Format (TUDF), used for financial credit report analysis.',
+            features: [
+              'TLV Parsing Engine: Complex Tag-Length-Value parser handling 100+ unique financial segments.',
+              'Status Derivation: Business logic to derive human-readable account statuses from raw bureau flags.',
+              'DPD Visualization: Conditional formatting to highlight Days Past Due (DPD) risks.'
+            ],
+            impact: 'Reduced report analysis time by 80% with dashboard-style views.',
+            tags: ['Python', 'Pandas', 'TLV Parsing', 'Openpyxl']
+          },
+          {
+            icon: '📄',
+            title: 'BULL Agritech PDF-to-Excel GRN Converter',
+            role: 'Backend Developer',
+            desc: 'Web-based tool for converting complex PDF "Goods Receipt Notes" into structured Excel files.',
+            features: [
+              'Text Extraction: PyMuPDF for precise coordinate-based text extraction from warehouse docs.',
+              'Data Parsing: Logic to identify Sr. No, Farmer Name, Crop, Weight, and Quality parameters.',
+              'Batch Processing: Flask interface allowing multiple PDF uploads and consolidated output.'
+            ],
+            impact: 'Saved 15 minutes of manual entry per GRN, processing thousands monthly.',
+            tags: ['Python', 'Flask', 'PyMuPDF', 'Openpyxl']
+          },
+          {
+            icon: '💰',
+            title: 'Smart Price Comparison & Quotation Analytics',
+            role: 'Full-Stack Developer',
+            desc: 'Web application that compares vendor price books against internal catalogs to save costs.',
+            features: [
+              'Fuzzy Product Matching: Logic to map vendor product descriptions to internal IDs with confidence scores.',
+              'Quotation Dashboard: Real-time stats on "Time Saved" and "Price Trends".',
+              'Intelligent Column Detection: Automatically identifies Price and Product columns in uploads.'
+            ],
+            impact: 'Identified an average of 12% potential cost savings across vendor quotes.',
+            tags: ['Python', 'Flask', 'Difflib', 'Pandas']
+          },
+          {
+            icon: '🌾',
+            title: 'Bull Agritech Farmers Data – API Extraction Engine',
+            role: 'Data Pipeline Engineer',
+            desc: 'High-reliability data extractor for Epicollect5 API, designed to sync massive farmer databases.',
+            features: [
+              'Rate-Limit Shield: Adaptive delays and cool-down periods to prevent IP bans.',
+              'Graceful Shutdown: Signal-handling system to ensure data is saved to JSON cache.',
+              'Live CLI Dashboard: Terminal-based progress tracker showing API limits and sync status.'
+            ],
+            impact: 'Successfully synchronized 100,000+ farmer records with zero downtime.',
+            tags: ['Python', 'Requests', 'Threading', 'Rate-Limiting']
+          },
+          {
+            icon: '📍',
+            title: 'Bull Agritech Gujarat Village Geo-Reference Dataset',
+            role: 'Data Analyst',
+            desc: 'Developed a comprehensive, validated dataset mapping all villages in Gujarat to Talukas and Districts.',
+            features: [
+              'Core Reference: Serves as the backbone for all geocoding and lead validation projects.',
+              'Validated Data: Comprehensive mapping of Talukas and Districts across Gujarat.'
+            ],
+            impact: 'Ensured high accuracy in all location-based analysis and reporting.',
+            tags: ['Python', 'Pandas', 'Geo-JSON', 'Dataset']
+          },
+          {
+            icon: '📲',
+            title: 'Bull Agritech Leads Telegram to Excel – Parser',
+            role: 'Python Developer',
+            desc: 'Specialized parser for Telegram HTML chat exports, extracting sales leads from chat history.',
+            features: [
+              'Internal Village Dictionary: Implements massive dictionary to validate location mentions.',
+              'HTML Parsing: BeautifulSoup4 and Regex for structured extraction from messy chat logs.'
+            ],
+            impact: 'Automated lead extraction from informal communication channels.',
+            tags: ['Python', 'BeautifulSoup4', 'Regex', 'Telegram']
+          },
+          {
+            icon: '🏭',
+            title: 'Bull Agritech Warehouse SOP & Compliance System',
+            role: 'Process Architect',
+            desc: 'Structural framework for warehouse inward/outward processing and farmer produce compliance.',
+            features: [
+              'Compliance Frameworks: Documented SOPs and Legal Agreements for warehouse operations.',
+              'Legal Integrity: Ensuring farmer produce compliance across the supply chain.'
+            ],
+            impact: 'Mitigated operational risks and standardized warehouse workflows.',
+            tags: ['SOP Design', 'Compliance', 'Risk Mitigation']
+          },
+          {
+            icon: '🔄',
+            title: 'Excel to JSON Product Data Converter',
+            role: 'Utility Developer',
+            desc: 'Script to convert complex product master files into structured JSON for frontend integration.',
+            features: [
+              'Data Normalization: Cleans and structures raw Excel data for application use.',
+              'Frontend Integration: Powering mobile and web apps with live product data.'
+            ],
+            impact: 'Streamlined product data pipeline for multi-platform application deployment.',
+            tags: ['Python', 'Pandas', 'JSON', 'Data Mapping']
+          }
         ]
       },
       {
         month: 'January 2026', items: [
-          { icon: '🏠', title: 'Real Estate CRM (Serverless)', desc: 'Full-stack CRM built with Google Apps Script backend + Google Sheets DB — property inventory, lead tracking, deal pipeline, agent follow-up scheduling, revenue analytics dashboards, PWA offline caching, and real-time bidirectional sync. Zero infrastructure cost, ~990 lines.', tags: ['Google Apps Script', 'Bootstrap 5', 'PWA', 'Vanilla JS', 'Google Sheets'] },
+          {
+            icon: '🏠',
+            title: 'RB Realtors – Real Estate CRM (Serverless)',
+            role: 'Lead Developer',
+            desc: 'Premium CRM for real estate agencies using Google Sheets as a serverless database.',
+            features: [
+              'Interactive HUD: Dashboard with Chart.js to track property availability and lead status.',
+              'Actionable Cards: Direct Call and WhatsApp triggers from lead cards.',
+              'Search & Filter: High-speed search engine querying the Google Sheets backend in real-time.'
+            ],
+            impact: 'Provided professional CRM experience with zero server maintenance costs.',
+            tags: ['HTML5', 'CSS3', 'JavaScript', 'Google Apps Script']
+          }
         ]
       },
       {
         month: 'December 2025', items: [
-          { icon: '✅', title: 'Data Validation Engine', desc: 'Scalable Python/Pandas row-level validation engine for large Excel datasets — runs email, mobile, mandatory field, length, and composite duplicate checks across thousands of rows in seconds. Generates per-error-type Excel output files. Fully config-driven.', tags: ['Python', 'Pandas', 'openpyxl', 'Config-Driven', 'Automation'] },
-          { icon: '📦', title: 'Vendor Price Book Dashboard', desc: 'Fully serverless single-HTML-file price comparison dashboard using JSON as live data source — Fuse.js fuzzy search, real-time multi-dimensional filtering (Vendor/Region/Category/State), lowest-cost vendor highlighting, glassmorphism UI.', tags: ['HTML5', 'Fuse.js', 'Tailwind CSS', 'JSON', 'Serverless'] },
-          { icon: '👥', title: 'Ezebiz Candidate Data Validator', desc: 'Python automation tool validating candidate recruitment Excel data — multi-field checks, composite duplicate detection (Name + Mobile + Email key), 10-digit mobile normalization, and color-coded master output reports with row-level status flags.', tags: ['Python', 'Pandas', 'openpyxl', 'HR Automation', 'Regex'] },
+          {
+            icon: '✅',
+            title: 'Ezebiz Candidate Data Validator',
+            role: 'Python Developer',
+            desc: 'Pre-migration data cleaning script for HR databases to ensure consistency.',
+            features: [
+              'Format Validation: Ensures name and phone number consistency across legacy datasets.',
+              'Automated Cleaning: Regex-based normalization of candidate records.'
+            ],
+            impact: 'Minimized data migration errors for enterprise-scale recruitment databases.',
+            tags: ['Python', 'Pandas', 'Regex', 'HR Tech']
+          },
+          {
+            icon: '📊',
+            title: 'Dashboard Vendor Price Book',
+            role: 'Frontend Developer',
+            desc: 'Visualization dashboard for vendor pricing trends to help procurement teams.',
+            features: [
+              'Trend Visualization: Chart.js dashboards tracking seasonal price fluctuations.',
+              'Price Analytics: Comparative analysis of vendor price books over time.'
+            ],
+            impact: 'Improved procurement decision-making through clear trend visualization.',
+            tags: ['HTML5', 'CSS3', 'Chart.js', 'Analytics']
+          },
+          {
+            icon: '🔍',
+            title: 'Address Matching Python – Prototype Engine',
+            role: 'Developer',
+            desc: 'Foundational prototype proving feasibility of automated geocoding for messy store data.',
+            features: [
+              'Feasibility Proof: Prototype using Geopy to match physical addresses to coordinates.',
+              'Initial Logic: Basis for the high-speed engine developed in later sprints.'
+            ],
+            impact: 'Paved the way for the enterprise-scale geocoding solution.',
+            tags: ['Python', 'Geopy', 'GIS', 'Prototype']
+          }
         ]
-      },
+      }
     ];
 
     // THREE.JS
@@ -2177,7 +2638,7 @@
       hist.unshift({ x: cx, y: cy }); hist.pop(); dots.forEach((d, i) => { d.style.left = hist[i].x + 'px'; d.style.top = hist[i].y + 'px'; });
     })();
     setTimeout(() => {
-      document.querySelectorAll('a,button,.pcard,.skc,.sbox,.clink,.btn').forEach(el => {
+      document.querySelectorAll('a,button,.pcard,.skc,.sbox,.clink,.btn,.cform-submit,#btt').forEach(el => {
         el.addEventListener('mouseenter', () => { cur.style.width = '18px'; cur.style.height = '18px'; cur.style.background = 'var(--gold)'; curR.style.width = '55px'; curR.style.height = '55px'; curR.style.borderColor = 'rgba(255,201,77,.6)'; });
         el.addEventListener('mouseleave', () => { cur.style.width = '8px'; cur.style.height = '8px'; cur.style.background = 'var(--cyan)'; curR.style.width = '36px'; curR.style.height = '36px'; curR.style.borderColor = 'rgba(0,240,255,.5)'; });
       });
@@ -2216,7 +2677,19 @@
       const grid = document.createElement('div'); grid.className = 'pgrid';
       grp.items.forEach((p, i) => {
         gn++; const el = document.createElement('div'); el.className = 'pcard'; el.style.transitionDelay = (i * .07) + 's';
-        el.innerHTML = `<div class="ptop"><span class="pico">${p.icon}</span><span class="pnum">#${String(gn).padStart(2, '0')}</span></div><div class="ptit">${p.title}</div><div class="pdesc">${p.desc}</div><div class="ptags">${p.tags.map(t => `<span class="ptag">${t}</span>`).join('')}</div>`;
+        const feats = p.features ? `<ul class="pfeat">${p.features.map(f => `<li>${f}</li>`).join('')}</ul>` : '';
+        const impact = p.impact ? `<div class="pimp">Impact: ${p.impact}</div>` : '';
+        const roleTag = p.role ? `<div class="prole">${p.role}</div>` : '';
+        
+        el.innerHTML = `
+          <div class="ptop"><span class="pico">${p.icon}</span><span class="pnum">#${String(gn).padStart(2, '0')}</span></div>
+          <div class="ptit">${p.title}</div>
+          ${roleTag}
+          <div class="pdesc">${p.desc}</div>
+          ${feats}
+          ${impact}
+          <div class="ptags">${p.tags.map(t => `<span class="ptag">${t}</span>`).join('')}</div>
+        `;
         grid.appendChild(el);
       });
       gEl.appendChild(grid); pw.appendChild(gEl);
@@ -2252,8 +2725,71 @@
     function closeNav() { document.getElementById('navbar').classList.remove('nav-open'); }
     document.addEventListener('click', e => { if (!e.target.closest('#navbar') && document.getElementById('navbar').classList.contains('nav-open')) closeNav(); });
 
+    // FOOTER YEAR
+    document.getElementById('fyear').textContent = new Date().getFullYear();
+
+    // ACTIVE NAV LINKS
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const navObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.35 });
+    sections.forEach(s => navObs.observe(s));
+
+    // NAV SCROLL STYLE
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', scrollY > 60);
+    });
+
+    // BACK TO TOP
+    const btt = document.getElementById('btt');
+    window.addEventListener('scroll', () => { btt.classList.toggle('visible', scrollY > 400); });
+    btt.addEventListener('mouseenter', () => { btt.style.borderColor = 'var(--cyan)'; });
+    btt.addEventListener('mouseleave', () => { btt.style.borderColor = ''; });
+
+    // TYPING ANIMATION FOR ROLE
+    const roles = ['Python Developer', 'Power BI Specialist', 'BFSI Data Analyst', 'ETL Engineer', 'SQL Expert', 'Automation Architect'];
+    const roleEl = document.getElementById('hrole-text');
+    if (roleEl) {
+      const cursor = document.createElement('span'); cursor.className = 'typing-cursor'; roleEl.appendChild(cursor);
+      let ri = 0, ci = 0, deleting = false;
+      roleEl.innerHTML = '';
+      roleEl.appendChild(cursor);
+      function typeRole() {
+        const word = roles[ri];
+        if (!deleting) {
+          roleEl.innerHTML = word.slice(0, ci + 1) + '<span class="typing-cursor"></span>';
+          ci++;
+          if (ci === word.length) { deleting = true; setTimeout(typeRole, 1600); return; }
+        } else {
+          roleEl.innerHTML = word.slice(0, ci - 1) + '<span class="typing-cursor"></span>';
+          ci--;
+          if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
+        }
+        setTimeout(typeRole, deleting ? 45 : 85);
+      }
+      setTimeout(typeRole, 2200);
+    }
+
+    // CONTACT FORM
+    function submitForm() {
+      const name = document.getElementById('cf-name').value.trim();
+      const email = document.getElementById('cf-email').value.trim();
+      const msg = document.getElementById('cf-msg').value.trim();
+      if (!name || !email || !msg) { alert('Please fill in all fields.'); return; }
+      const sub = encodeURIComponent(`Portfolio Contact from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
+      window.location.href = `mailto:mihir.bodana030@gmail.com?subject=${sub}&body=${body}`;
+    }
+
     // DISABLE 3D TILT + MAGNETIC on touch devices
-    const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
     if (!isTouch) {
       document.querySelectorAll('.pcard,.skc').forEach(card => {
         card.addEventListener('mousemove', e => { const r = card.getBoundingClientRect(); const x = (e.clientX - r.left) / r.width - .5; const y = (e.clientY - r.top) / r.height - .5; card.style.transform = `translateY(-10px) rotateX(${-y * 16}deg) rotateY(${x * 16}deg)`; card.style.boxShadow = `${-x * 35}px ${y * 15}px 80px rgba(0,85,255,.25),0 0 30px rgba(0,240,255,.08)`; });
